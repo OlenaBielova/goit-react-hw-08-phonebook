@@ -1,16 +1,17 @@
 import { ContactForm } from '../Form/Form';
-import { Filter } from '../Filter/Filter';
+
 import { ContactList } from '../ContactList/ContactList';
-import { Container } from './App.styled';
+import { ContactsContainer, FormContainer, Body } from './App.styled';
 
 export function App() {
   return (
-    <Container>
-      <h3>Phonebook</h3>
+    <Body>
+      <FormContainer>
       <ContactForm />
-      <h3>Contacts</h3>
-      <Filter />
+      </FormContainer>
+      <ContactsContainer>
       <ContactList />
-    </Container>
+    </ContactsContainer>
+    </Body>
   );
 }

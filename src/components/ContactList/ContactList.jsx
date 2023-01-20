@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts, selectFilter } from '../../redux/selectors';
+import { Filter } from '../Filter/Filter';
 import { List, Contact, DeleteBtn } from './ContactList.styled';
 import { fetchContacts, deleteContact } from 'redux/operations';
 
@@ -22,6 +23,9 @@ export const ContactList = () => {
   );
 
   return (
+    <>
+      <h3>Contacts</h3>
+    <Filter />
     <List>
       {isLoading && <p>Loading contacts...</p>}
       {error && <p>{error}</p>}
@@ -35,6 +39,6 @@ export const ContactList = () => {
           </DeleteBtn>
         </Contact>
       ))}
-    </List>
+    </List></>
   );
 };

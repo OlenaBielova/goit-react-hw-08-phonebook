@@ -6,13 +6,14 @@ export const NewContactForm = styled(Form)`
   margin-left: auto;
   width: 550px;
   text-align: start;
+  font-size: 20px;
   font-weight: bold;
   color: grey;
 `;
 
 export const NameInput = styled(Field)`
   min-width: 155px;
-  margin-left: 36px;
+  margin-left: 32px;
   margin-bottom: 10px;
   height: 30px;
   font-size: 16px;
@@ -31,14 +32,14 @@ export const AddBtn = styled.button`
   height: 30px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #f9844d;
-  color: #ffffff;
+  background-color: white;
+  color: black;
   border: none;
   border-radius: 4px;
 
   &:hover {
-    background-color: #ffffff;
-    color: #f9844d;
+    background-color: black;
+    color: white;
     cursor: pointer;
   }
 `;
