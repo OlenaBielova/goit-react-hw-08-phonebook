@@ -1,14 +1,18 @@
 import { Form, Field } from 'formik';
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+    text-align: center;
+`;
+
 export const NewContactForm = styled(Form)`
-  margin-right: auto;
-  margin-left: auto;
-  width: 550px;
-  text-align: start;
+  // margin-right: auto;
+  // margin-left: auto;
+  width: 350px;
+  text-align: center;
   font-size: 20px;
   font-weight: bold;
-  color: grey;
+  color: rgb(7, 132, 249);
 `;
 
 export const NameInput = styled(Field)`
@@ -33,12 +37,13 @@ export const AddBtn = styled.button`
   font-size: 16px;
   font-weight: bold;
   background-color: white;
-  color: black;
+  outline: 1px solid rgb(7, 132, 249);
+  color: rgb(7, 132, 249);
   border: none;
   border-radius: 4px;
 
   &:hover {
-    background-color: black;
+    background-color: rgb(7, 132, 249);
     color: white;
     cursor: pointer;
   }

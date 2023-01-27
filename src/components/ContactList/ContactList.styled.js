@@ -1,37 +1,48 @@
 import styled from 'styled-components';
+import { TiDelete } from 'react-icons/ti'
+
+export const Wrapper = styled.div`
+    text-align: center;
+
+`;
 
 export const List = styled.ul`
-  margin-right: auto;
-  margin-left: auto;
   padding: 0 !important;
-  width: 480px;
   list-style-type: circle;
 `;
 
 export const Contact = styled.li`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   list-style: none;
   padding: 0 !important;
   font-size: 20px;
+  font-weight: normal;
   gap: 20px;
   line-height: 0;
 `;
 
 export const DeleteBtn = styled.button`
-  width: 70px;
-  height: 30px;
-  margin-top: auto;
-  margin-bottom: auto;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: white;
-  color: black;
-  border: none;
-  border-radius: 4px;
+width: 35px;
+    background: transparent;
+    border: none !important;
+  border-radius: 50%;
 
   &:hover {
-    background-color: black;
+    cursor: pointer;
+  }
+`;
+
+export const DeleteIcon = styled(TiDelete)`
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: transparent;
+  color: rgb(7, 132, 249);x 
+  border: none;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: red;
     color: white;
     cursor: pointer;
   }

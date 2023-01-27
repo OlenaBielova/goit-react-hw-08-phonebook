@@ -1,10 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts, selectFilter } from '../../redux/selectors';
+import { selectContacts, selectFilter } from '../../redux/contacts/selectors';
 import { Filter } from '../Filter/Filter';
-import { List, Contact, DeleteBtn } from './ContactList.styled';
-import { fetchContacts, deleteContact } from 'redux/operations';
+import { Wrapper, List, Contact, DeleteBtn, DeleteIcon } from './ContactList.styled';
+import { fetchContacts, deleteContact } from 'redux/contacts/operations';
+
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ export const ContactList = () => {
   }, [dispatch]);
 
   const contacts = useSelector(selectContacts);
+  console.log(contacts);
   const filter = useSelector(selectFilter);
 
   const { items, isLoading, error } = contacts;
@@ -23,22 +25,23 @@ export const ContactList = () => {
   );
 
   return (
-    <>
-      <h3>Contacts</h3>
+    <Wrapper>
+      <h3>My contacts</h3>
     <Filter />
     <List>
       {isLoading && <p>Loading contacts...</p>}
       {error && <p>{error}</p>}
-      {filteredContacts.map(({ name, phone, id }) => (
+      {filteredContacts.map(({ name, number, id }) => (
         <Contact key={id}>
-          <p>
-            {name} : {phone}
-          </p>
           <DeleteBtn type="button" onClick={() => dispatch(deleteContact(id))}>
-            Delete
+            <DeleteIcon size={25}/>
           </DeleteBtn>
+          <p>
+            {name} : {number}
+          </p>
+          
         </Contact>
       ))}
-    </List></>
+    </List></Wrapper>
   );
 };

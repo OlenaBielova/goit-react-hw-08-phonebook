@@ -1,9 +1,10 @@
 import React from 'react';
 import { Formik, ErrorMessage } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { addContact } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
 import {
+  Wrapper,
   NewContactForm,
   NameInput,
   NumberInput,
@@ -17,8 +18,7 @@ export function ContactForm() {
 
   const initialValues = {
     name: '',
-    phone: '',
-    id: '',
+    number: '',
   };
 
   const handleSubmit = (item, { resetForm }) => {
@@ -36,8 +36,8 @@ export function ContactForm() {
   };
 
   return (
-    <>
-      <h3>Phonebook</h3>
+    <Wrapper>
+      <h3>Add New</h3>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       <NewContactForm autoComplete="off">
         <label>
@@ -62,7 +62,7 @@ export function ContactForm() {
           <NumberInput
             type="tel"
             placeholder="+38011 111 11 11"
-            name="phone"
+            name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
@@ -75,6 +75,6 @@ export function ContactForm() {
         <AddBtn type="submit">Add</AddBtn>
       </NewContactForm>
     </Formik>
-    </>
+    </Wrapper>
   );
 }

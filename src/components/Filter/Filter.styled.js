@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
 export const SearchByName = styled.label`
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
-  color: grey;
+  color: rgb(7, 132, 249);
 `;
 
 export const SearchInput = styled.input`
 min-width: 155px;
-margin: 0px 25px;
-
+margin-top: 7px;
 height: 30px;
 font-size: 16px;
 }

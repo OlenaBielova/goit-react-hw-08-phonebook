@@ -1,8 +1,8 @@
 import React from 'react';
 import { SearchByName, SearchInput } from './Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeFilter } from 'redux/contactsSlice';
-import { selectFilter } from 'redux/selectors';
+import { changeFilter } from '../../redux/contacts/contactsSlice';
+import { selectFilter } from 'redux/contacts/selectors';
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -11,6 +11,7 @@ export const Filter = () => {
   return (
     <SearchByName>
       Find contact by name
+      <br />
       <SearchInput
         type="text"
         value={filter}
