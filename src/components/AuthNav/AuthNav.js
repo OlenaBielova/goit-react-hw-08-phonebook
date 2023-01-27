@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const AuthNavWrapper = styled.div`
-  width: 130px;
+  width: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
