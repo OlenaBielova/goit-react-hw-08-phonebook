@@ -4,17 +4,11 @@ import { Link, Nav } from './Navigation.styled';
 
 export const Navigation = () => {
   const isLoggedIn = useSelector(getIsLoggedIn);
-console.log(isLoggedIn);
+  console.log(isLoggedIn);
   return (
     <Nav>
-      <Link to="/">
-        Home
-      </Link>
-      {isLoggedIn && 
-        <Link to="/contacts">
-          Contacts
-        </Link>
-      }
+      <Link to="/">Home</Link>
+      {isLoggedIn && <Link to="/contacts">Contacts</Link>}
     </Nav>
   );
 };

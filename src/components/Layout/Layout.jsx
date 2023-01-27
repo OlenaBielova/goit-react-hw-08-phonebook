@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { AppBar } from '../AppBar/AppBar';
 import { Suspense } from 'react';
-import {Wrapper} from './Layout.styled';
+import { Wrapper } from './Layout.styled';
 
 export const Layout = () => {
   return (
@@ -9,7 +9,7 @@ export const Layout = () => {
       <AppBar />
       <Suspense fallback={null}>
         <Wrapper>
-<Outlet />
+          <Outlet />
         </Wrapper>
       </Suspense>
     </div>

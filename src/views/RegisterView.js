@@ -1,11 +1,9 @@
-
-import {RegisterForm} from '../components/RegisterForm/RegisterForm.jsx';
+import { RegisterForm } from '../components/RegisterForm/RegisterForm.jsx';
 
 const Register = () => {
-
-return (
+  return (
     <div>
-        <RegisterForm/>
+      <RegisterForm />
     </div>
   );
 };

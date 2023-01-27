@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { TiDelete } from 'react-icons/ti'
+import { TiDelete } from 'react-icons/ti';
 
 export const Wrapper = styled.div`
-    text-align: center;
-
+  text-align: center;
 `;
 
 export const List = styled.ul`
@@ -23,9 +22,9 @@ export const Contact = styled.li`
 `;
 
 export const DeleteBtn = styled.button`
-width: 35px;
-    background: transparent;
-    border: none !important;
+  width: 35px;
+  background: transparent;
+  border: none !important;
   border-radius: 50%;
 
   &:hover {

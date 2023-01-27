@@ -2,7 +2,7 @@ import { Form, Field } from 'formik';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    text-align: center;
+  text-align: center;
 `;
 
 export const NewContactForm = styled(Form)`

@@ -10,8 +10,8 @@ export const FormContainer = styled.div`
 `;
 
 export const ContactsContainer = styled.div`
-flex-grow: 1;  
-min-width: 400px;
+  flex-grow: 1;
+  min-width: 400px;
   margin: 20px auto;
   padding: 20px;
 

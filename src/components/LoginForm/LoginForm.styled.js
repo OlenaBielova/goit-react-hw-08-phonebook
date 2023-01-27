@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-display: block;
-max-width: 400px;
-    text-align: right;
+  display: block;
+  max-width: 400px;
+  text-align: right;
 `;
 
 export const FormField = styled.label`
@@ -44,4 +44,3 @@ export const Btn = styled.button`
     cursor: pointer;
   }
 `;
-
