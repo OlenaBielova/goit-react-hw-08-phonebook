@@ -3,6 +3,7 @@ import { TiDelete } from 'react-icons/ti';
 
 export const Wrapper = styled.div`
   text-align: center;
+  min-width: 350px;
 `;
 
 export const List = styled.ul`
