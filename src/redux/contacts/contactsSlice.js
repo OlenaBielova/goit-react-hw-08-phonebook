@@ -8,9 +8,6 @@ import {
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: {
-    // items: [],
-    // isLoading: false,
-    // error: null,
     contacts: {
       items: [],
       isLoading: false,
@@ -43,7 +40,6 @@ const contactsSlice = createSlice({
       state.contacts.isLoading = true;
     },
     [addContact.fulfilled](state, action) {
-      console.log(action.payload);
       state.contacts.isLoading = false;
       state.contacts.error = null;
       state.contacts.items.push(action.payload);

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import img from '../../images/vivid-blurred-colorful-background.jpg';
 
 export const FormContainer = styled.div`
   width: 300px;

@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { AuthNavWrapper, Link } from './AuthNav';
 
 export const AuthNav = () => {
