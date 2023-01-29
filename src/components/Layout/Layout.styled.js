@@ -8,6 +8,6 @@ export const Wrapper = styled.div`
   margin-top: 30px;
   justify-content: space-around;
   gap: 20px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
 `;
